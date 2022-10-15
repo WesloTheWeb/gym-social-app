@@ -1,0 +1,19 @@
+.genButton {
+    background-color: #1BB435;
+    margin: 0 1rem;
+    padding: 1.2rem;
+    border: 1px solid #000;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #FFFFFF;
+
+    &:hover {
+        cursor: pointer;
+        opacity: .95;;
+    }
+}
+
+.login {
+    background-color: #166FE6;
+}
