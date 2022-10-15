@@ -7,9 +7,7 @@ import styles from '../styles/Home.module.scss';
 export default function Home() {
   return (
     <>
-      <Head>
-        <h1>At the Barbell</h1>
-      </Head>
+      <h1>At the Barbell</h1>
       <main>
         <div className='homepage-cta-container'>
           <HomePageButton title="Create an Account" />
