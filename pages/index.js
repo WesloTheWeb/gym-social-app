@@ -17,12 +17,13 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className='homepage'>
       {createAccountModal ? <Overlay /> : null}
-      {createAccountModal ? <Modal click={handleCreateAccountModal}  /> : null}
-      <h1>At the Barbell</h1>
+      {createAccountModal ? <Modal click={handleCreateAccountModal} /> : null}
       <main>
         <div className='homepage-cta-container'>
+          <h1 className='homepage-header'>At the Barbell</h1>
+          <p>Welcome! Please sign in or create an account.</p>
           <HomePageButton
             click={handleCreateAccountModal}
             title="Create an Account" />
@@ -45,6 +46,6 @@ export default function Home() {
           </span>
         </a>
       </footer> */}
-    </>
+    </div>
   )
 }
