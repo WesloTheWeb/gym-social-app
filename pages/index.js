@@ -25,12 +25,12 @@ export default function Home() {
           <h1 className='homepage-header'>At the Barbell</h1>
           <p>Welcome! Please sign in or create an account.</p>
           <HomePageButton
-            click={handleCreateAccountModal}
-            title="Create an Account" />
-          <HomePageButton
             title="Log in"
             loginButton
           />
+          <HomePageButton
+            click={handleCreateAccountModal}
+            title="Create an Account" />
         </div>
       </main>
 

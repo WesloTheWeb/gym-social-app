@@ -33,7 +33,7 @@ a {
 
 .homepage-cta-container {
   position: absolute;
-  margin-top: 5rem;
+  // margin-top: 5rem;
   text-align: center;
   background-color: rgba(0, 0, 0, .7);
   border-radius: 15px;
@@ -46,6 +46,22 @@ a {
   p {
     color: #FFF;
     margin: 2rem;
+  }
+}
+
+// TODO: Might need a new image for specific view types and angles. NextJS might have one to mitigate this but this is CSS property
+@media only screen and (max-width: 769px) {
+  .homepage-cta-container {
+    position: absolute;
+    border-radius: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin-left: auto;
+    margin-top: auto;
   }
 }
 
@@ -64,7 +80,3 @@ a {
   height: 45.1rem;
   width: 100%;
 }
-
-// .homepage-header {
-//   padding-top: 10rem;
-// }

@@ -1,19 +1,7 @@
 @import '../../../styles/variables.scss';
 
 .modalContainer {
-    background-color: $modalBackground;
-    position: absolute;
-    width: 432px;
-    padding: 0 1rem 2rem;
-    // height: 350px;
-    left: 50%;
-    top: 40%; 
-    margin-left: -150px;
-    margin-top: -150px;
-    z-index: 3;
-    border: 2px solid #000;
-    border-radius: 10px;
-
+    
     svg {
         cursor: pointer;
         width: 2rem;
@@ -36,6 +24,18 @@
     div {
         margin: .5rem 1rem;
     }
+
+    background-color: $modalBackground;
+    position: absolute;
+    width: 432px;
+    padding: 0 1rem 2rem;
+    left: 50%;
+    top: 30%; 
+    margin-left: -150px;
+    margin-top: -150px;
+    z-index: 3;
+    border: 2px solid #000;
+    border-radius: 10px;
 
     .modalHeader {
         margin-top: 1rem;

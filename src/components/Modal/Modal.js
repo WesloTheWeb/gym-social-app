@@ -28,7 +28,7 @@ const Modal = ({ click }) => {
             className={modalContainer}
             onSubmit={handleSubmit(onSubmit)}
         >
-            <div class={modalHeader}>
+            <div className={modalHeader}>
                 <h2>Sign up form</h2>
                 <div onClick={click}>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
