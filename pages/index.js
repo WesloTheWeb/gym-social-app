@@ -18,8 +18,8 @@ export default function Home() {
 
   return (
     <>
-      {createAccountModal ? <Overlay /> : null}
-      {createAccountModal ? <Modal click={handleCreateAccountModal} /> : null}
+      {createAccountModal ? <Overlay click={handleCreateAccountModal} /> : null}
+      {createAccountModal ? <Modal /> : null}
       <h1>At the Barbell</h1>
       <main>
         <div className='homepage-cta-container'>

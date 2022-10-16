@@ -1,10 +1,27 @@
 import React from 'react';
+import { useForm, Controller } from "react-hook-form";
+import ReactDatePicker from "react-datepicker";
 import HomePageButton from '../HomePageButton/HomePageButton';
 import classes from './Modal.module.scss';
 
-const { modalContainer, modalHeader } = classes;
+const { modalContainer, modalHeader, userInformationContainer } = classes;
+
+const defaultValues = {
+    Native: "",
+    TextField: "",
+    Select: "",
+    ReactSelect: { value: "vanilla", label: "Vanilla" },
+    Checkbox: false,
+    switch: false,
+    RadioGroup: "",
+    numberFormat: 123456789,
+    downShift: "apple"
+};
 
 const Modal = ({ click }) => {
+
+    const { register, handleSubmit, watch, control, formState: { errors } } = useForm(defaultValues);
+
     return (
         <form className={modalContainer}>
             <div class={modalHeader}>
@@ -16,11 +33,33 @@ const Modal = ({ click }) => {
                 </div>
             </div>
             <p>Please follow the prompt to create your account. It's quick and easy.</p>
-            <section>
-                <label>Create Username</label>
-                <input type="text" />
+            <section className={userInformationContainer}>
+                <div>
+                    <label>Create Username</label>
+                    <input placeholder="Username" {...register("username", { required: true })} />
+                </div>
+                <div>
+                    <label>Enter email address</label>
+                    <input placeholder="Email Address" {...register("email", { required: true })} />
+                </div>
+                <div>
+                    <label>Create password</label>
+                    <input placeholder="Password" {...register("password", { required: true })} />
+                </div>
+
+                {/* <Controller
+                    control={control}
+                    name="ReactDatepicker"
+                    render={({ field }) => (
+                        <ReactDatePicker
+                            placeholderText='Select date'
+                            onChange={(date) => field.onChange(date)}
+                            selected={field.value}
+                        />
+                    )}
+                /> */}
             </section>
-            
+
             <HomePageButton title="Sign Up" />
 
         </form>
