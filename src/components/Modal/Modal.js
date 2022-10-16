@@ -21,9 +21,13 @@ const defaultValues = {
 const Modal = ({ click }) => {
 
     const { register, handleSubmit, watch, control, formState: { errors } } = useForm(defaultValues);
+    const onSubmit = data => console.log(data);
 
     return (
-        <form className={modalContainer}>
+        <form
+            className={modalContainer}
+            onSubmit={handleSubmit(onSubmit)}
+        >
             <div class={modalHeader}>
                 <h2>Sign up form</h2>
                 <div onClick={click}>
@@ -40,11 +44,34 @@ const Modal = ({ click }) => {
                 </div>
                 <div>
                     <label>Enter email address</label>
-                    <input placeholder="Email Address" {...register("email", { required: true })} />
+                    <input
+                        placeholder="Email Address" {...register("email", {
+                            required: "Email Address is required"
+                        })}
+                    // aria-invalid={errors.mail ? "true" : "false"}
+                    />
                 </div>
                 <div>
                     <label>Create password</label>
                     <input placeholder="Password" {...register("password", { required: true })} />
+                </div>
+                <div>
+                    <label>Select Gender</label>
+                    <select {...register("gender")}>
+                        <option value="female">female</option>
+                        <option value="male">male</option>
+                        <option value="other">other</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Enter Age</label>
+                    <input placeholder="Enter Age" {...register("age", {
+                        required: true,
+                        pattern: {
+                            value: /\d+/,
+                            message: "This input is number only."
+                        }
+                    })} />
                 </div>
 
                 {/* <Controller
