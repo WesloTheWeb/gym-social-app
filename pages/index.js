@@ -10,25 +10,42 @@ import Overlay from '../src/components/Overlay/Overlay';
 export default function Home() {
 
   const [createAccountModal, showCreateAccountModal] = useState(false);
+  const [loginAccountModal, showLoginAccountModal] = useState(false);
+
 
   const handleCreateAccountModal = (evnt) => {
     evnt.preventDefault();
     showCreateAccountModal(!createAccountModal);
   };
 
+  const handleLoginModal = (evnt) => {
+    evnt.preventDefault();
+    showLoginAccountModal(!loginAccountModal);
+  };
+
+
   return (
     <div className='homepage'>
-      {createAccountModal ? <Overlay /> : null}
+      {createAccountModal || loginAccountModal ? <Overlay /> : null}
       {createAccountModal ? <Modal click={handleCreateAccountModal} /> : null}
+      {loginAccountModal ?
+        <Modal
+          click={handleLoginModal}
+          loginModal={loginAccountModal} /> :
+        null
+      }
       <main>
         <div className='homepage-cta-container'>
           <h1 className='homepage-header'>At the Barbell</h1>
           <p>Welcome! Please sign in or create an account.</p>
           <HomePageButton
             title="Log in"
+            click={handleLoginModal}
             loginButton
+            loggingIn={loginAccountModal}
           />
           <HomePageButton
+            loggingIn={loginAccountModal}
             click={handleCreateAccountModal}
             title="Create an Account" />
         </div>
