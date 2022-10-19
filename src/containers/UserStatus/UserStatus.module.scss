@@ -1,0 +1,38 @@
+@import '../../../styles/variables.scss';
+
+.userStatusContainer {
+    padding: 1rem;
+    border-bottom: 3px solid #000;
+    margin: 0 2rem;
+    padding-bottom: 5rem;
+
+    input {
+        font-size: 1.5rem;
+        background-color: $postStatusBackground;
+        padding: 1.2rem;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+        border: solid 3px #F0F2F5;
+
+        &[type=text]:focus {
+            outline: 2px solid $selectStatusOutline;     /* oranges! yey */
+        }    
+    }
+    
+    button {
+        display: block;
+        color: #FFF;
+        border-radius: 8px;
+        background-color: $ctaBlue;
+        font-size: 1rem;
+        padding: 0.25rem 1rem;
+        border: none;
+        margin-left: auto;
+        margin-top: 0.5rem;
+
+        &:hover {
+            background-color: $ctaBlueHover;
+        }
+    }
+}
