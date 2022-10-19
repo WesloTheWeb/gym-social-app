@@ -1,11 +1,9 @@
 import { React, useState } from 'react';
 import Head from 'next/head'
-// import Home from './Home';
 import Image from 'next/image';
 import HomePageButton from '../src/components/HomePageButton/HomePageButton';
 import Modal from '../src/components/Modal/Modal';
 import Overlay from '../src/components/Overlay/Overlay';
-// import styles from '../styles/Home.module.scss';
 
 export default function Home() {
 
