@@ -7,8 +7,12 @@ body,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+p, div {
+  font-size: 1rem;
+}
+
 body {
-  background-color: #F3F3F3;
+  background-color: #FFF;
 }
 
 h1 {
@@ -79,4 +83,9 @@ a {
   background-position: bottom right;
   height: 45.1rem;
   width: 100%;
+}
+
+.homepage-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
 }

@@ -1,0 +1,17 @@
+.miniInfoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 150px;
+    text-align: center;
+    margin: 0 auto;
+
+    span {
+        font-weight: bold;
+    }
+
+    img {
+        border: 5px solid #000;
+        border-radius: 50%;
+    }
+}

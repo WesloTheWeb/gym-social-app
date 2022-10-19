@@ -10,10 +10,8 @@ const Header = (props) => {
                 <img src="#" alt="logo" />
                 <h1>At the Barbell</h1>
             </div>
-
         </nav>
     );
 };
-
 
 export default Header;
