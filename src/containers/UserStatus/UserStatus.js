@@ -7,11 +7,6 @@ const { userStatusContainer } = classes;
 
 const UserStatus = (props) => {
 
-    //TODO: Create function that usesForm hook data as payload for submit button to handlepost.
-    const handleStatus = (evnt) => {
-        // updates form here may need state.
-    }
-
     const defaultValues = {
         Native: "",
         TextField: "",
@@ -28,13 +23,16 @@ const UserStatus = (props) => {
     const onSubmit = data => console.log(data);
 
     return (
-        <div className={userStatusContainer}>
+        <form 
+            className={userStatusContainer}
+            onSubmit={handleSubmit(onSubmit)}    
+        >
             <input
             type='text'
             placeholder="What shall we lift today?"
              {...register("updateStatus", { required: false })} />
             <button>Post Status</button>
-        </div>
+        </form>
     );
 };
 
