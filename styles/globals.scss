@@ -1,5 +1,4 @@
-// TODO: Clean up the SCSS classes, and variable color naming factors.
-
+@import './variables.scss';
 
 html,
 body,
@@ -15,7 +14,7 @@ p, div {
 }
 
 body {
-  background-color: #FFF;
+  background-color: $white;
 }
 
 h1 {
@@ -31,22 +30,22 @@ button {
   cursor: pointer;
 }
 
+// default that came with nextJS
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 
   body {
-    color: white;
+    color: $white;
     background: black;
   }
 }
 
 .homepage-cta-container {
   position: absolute;
-  // margin-top: 5rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: $shadedBackground;
   border-radius: 15px;
   padding: 2rem 10rem 10rem;
   left: 40%;
@@ -63,10 +62,7 @@ button {
 // TODO: Might need a new image for specific view types and angles. NextJS might have one to mitigate this but this is CSS property
 @media only screen and (max-width: 769px) {
   .homepage-cta-container {
-    position: absolute;
     border-radius: 0;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem 2rem;
     height: 100%;
     left: 0;
@@ -77,8 +73,8 @@ button {
 }
 
 .homepage-header {
-  color: #FFF;
-  margin: 3rem 0;
+  color: $white;
+  // margin: 3rem 0;
 }
 
 .homepage {

@@ -1,9 +1,24 @@
-$modalBackground: #FFF;
+// Primary Colors
+$white: #FFF;
+$black: #000;
+
+// Headers
 $navHeaderBackground: #E8E8E8;
+
+// Borders
+$standardBorder: 1px solid #000;
+$boxShadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+
+// Modal, Overlays and Backgrounds
+$modalBackground: #FFF;
+$backdropColor: #696969;
+$shadedBackground: rgba(0, 0, 0, 0.7);
 
 // CTA Properties
 $ctaBlue: #166FE6;
 $ctaBlueHover: #0937EB;
+$ctaGreen: #1BB435;
+$ctaBorderRadius: 10px;
 
 // Status Properties
 $postStatusBackground: #F0F2F5;

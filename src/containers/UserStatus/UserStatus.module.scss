@@ -2,7 +2,7 @@
 
 .userStatusContainer {
     padding: 1rem;
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid $black;
     margin: 0 2rem;
     padding-bottom: 5rem;
 
@@ -12,7 +12,7 @@
         padding: 1.2rem;
         width: 100%;
         border-radius: 10px;
-        box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+        box-shadow: $boxShadow;
         border: solid 3px #F0F2F5;
 
         &[type=text]:focus {
@@ -22,7 +22,7 @@
     
     button {
         display: block;
-        color: #FFF;
+        color: $white;
         border-radius: 8px;
         background-color: $ctaBlue;
         font-size: 1rem;
