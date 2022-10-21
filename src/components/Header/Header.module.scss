@@ -1,0 +1,11 @@
+@import '../../../styles/variables.scss';
+
+.headerContainer {
+    display: flex;
+    background-color: $navHeaderBackground;
+    padding: 1rem;
+
+    div {
+        display: flex;
+    }
+}

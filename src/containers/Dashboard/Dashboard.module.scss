@@ -1,0 +1,17 @@
+@import '../../../styles/variables.scss';
+
+.container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    border-right: 1px solid $borderColor;
+    padding: 2rem;
+
+    button {
+        padding: .75rem 2rem;
+        cursor: pointer;
+        margin: .5rem 0;
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+}

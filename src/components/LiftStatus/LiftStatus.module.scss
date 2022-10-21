@@ -1,0 +1,40 @@
+@import '../../../styles/variables.scss';
+
+.liftStatusContainer {
+    border: #707070 2px solid;
+    border-radius: 10px;
+    padding: 2.5rem 1rem 1rem 1rem;
+
+    .statusContent {
+        padding: 0 1rem;
+    }
+
+    .statusActions {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        margin: 1rem 0 .75rem 0;
+    }
+
+    svg {
+        width: 30%;
+        padding-right: 0.5rem;
+    }
+
+    button {
+        display: flex;
+        width: 12%;
+        font-size: 1.1rem;
+        background-color: transparent;
+        border: none;
+        margin: 0 1rem;
+
+        &:hover {
+            color: $ctaBlue;
+        }
+    }
+}
+
+.statusFlex {
+    display: flex;
+}

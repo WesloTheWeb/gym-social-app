@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 html,
 body,
 * {
@@ -7,8 +9,12 @@ body,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+p, div {
+  font-size: 1rem;
+}
+
 body {
-  background-color: #F3F3F3;
+  background-color: $white;
 }
 
 h1 {
@@ -20,22 +26,26 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
+// default that came with nextJS
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
 
   body {
-    color: white;
+    color: $white;
     background: black;
   }
 }
 
 .homepage-cta-container {
   position: absolute;
-  // margin-top: 5rem;
   text-align: center;
-  background-color: rgba(0, 0, 0, .7);
+  background-color: $shadedBackground;
   border-radius: 15px;
   padding: 2rem 10rem 10rem;
   left: 40%;
@@ -52,10 +62,7 @@ a {
 // TODO: Might need a new image for specific view types and angles. NextJS might have one to mitigate this but this is CSS property
 @media only screen and (max-width: 769px) {
   .homepage-cta-container {
-    position: absolute;
     border-radius: 0;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
     padding: 1rem 2rem;
     height: 100%;
     left: 0;
@@ -66,8 +73,8 @@ a {
 }
 
 .homepage-header {
-  color: #FFF;
-  margin: 3rem 0;
+  color: $white;
+  // margin: 3rem 0;
 }
 
 .homepage {
@@ -79,4 +86,9 @@ a {
   background-position: bottom right;
   height: 45.1rem;
   width: 100%;
+}
+
+.homepage-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
 }

@@ -1,13 +1,15 @@
+@import '../../../styles/variables.scss';
+
 .genButton {
     width: 100%;
-    background-color: #1BB435;
+    background-color: $ctaGreen;
     margin: 1rem 0;
     padding: 1.2rem;
-    border: 1px solid #000;
-    border-radius: 10px;
+    border: $standardBorder;
+    border-radius: $ctaBorderRadius;
     font-weight: bold;
     text-transform: capitalize;
-    color: #FFFFFF;
+    color: $white;
 
     &:hover {
         cursor: pointer;
@@ -16,5 +18,5 @@
 }
 
 .login {
-    background-color: #166FE6;
+    background-color: $ctaBlue;
 }

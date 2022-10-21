@@ -1,8 +1,10 @@
+@import '../../../styles/variables.scss';
+
 .backdrop {
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: 2;
-    background-color: #696969;
+    background-color: $backdropColor;
     opacity: .7; 
 }
