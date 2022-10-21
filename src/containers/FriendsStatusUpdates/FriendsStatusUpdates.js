@@ -6,7 +6,7 @@ const { marker, container } = classes;
 
 const FriendsStatusUpdates = (props) => {
     return (
-        <section className={`${marker} ${container}`}>
+        <section className={`${container}`}>
             <LiftStatus />
         </section>
     );

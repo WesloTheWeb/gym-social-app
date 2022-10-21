@@ -3,27 +3,25 @@ import Image from 'next/image'
 import sample from '../../../public/images/sample-2.png';
 import classes from './UserMinified.module.scss';
 
-const { miniInfoContainer } = classes;
+const { miniInfoContainer, feedMiniInfoContainer } = classes;
 
-const UserMinified = ({ userName, fullName, gym }) => {
+const UserMinified = ({ userName, fullName, gym, feed }) => {
 
     return (
         <div>
-            <div className={miniInfoContainer}>
+            <div className={feed ? feedMiniInfoContainer : miniInfoContainer}>
                 <Image
                     src={sample}
                     alt="Picture of the author"
                     width="150px"
                     height="150px"
                 />
-                <span>donuts35</span>
-                <div>Kiriko Kamori</div>
-                <label>MKE Muscle</label>
-
+                <span>{userName}</span>
+                <div>{fullName}</div>
+                <label>{gym}</label>
             </div>
         </div>
     );
 };
-
 
 export default UserMinified;

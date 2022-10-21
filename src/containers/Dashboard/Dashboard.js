@@ -7,7 +7,11 @@ const { container } = classes;
 const Dashboard = (props) => {
     return (
         <section className={container}>
-            <UserMinified />
+            <UserMinified
+                userName={'donuts35'}
+                fullName={'Kiriko Kamori'}
+                gym={'MKE Muscle'}
+                />
             <button>Profile</button>
             <button>Account Settings</button>
             <button>Log Out</button>
