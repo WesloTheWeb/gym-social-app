@@ -22,9 +22,6 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Developer Notes
-This project is a work in progress and started in the Fall of 2022. As I update the design and iterations a lot is expected to change, however I plan to keep official versions of release branches for archive purposes as time goes on.
-
 ## Main Features
 - Creating an account.
 - Posting, deleting status updates.
@@ -36,3 +33,20 @@ This project is a work in progress and started in the Fall of 2022. As I update 
 - [✔] <s>Background change to the time of day and weather (may need to find royalty free asset).</s>
 - [ ] Calendar widget
 - [ ] Choose a modern database for the backend
+
+
+## Developer Notes
+This project is a work in progress and started in the Fall of 2022. As I update the design and iterations a lot is expected to change, however I plan to keep official versions of release branches for archive purposes as time goes on.
+
+## Technologies Used
+### Front End
+- NextJS (via Create-Next-App).
+- JavaScript (ES 6+)
+- SASS
+- React Hook Form
+- Adobe XD
+
+### Back End
+- MongoDB
+- Express
+- NodeJS
