@@ -2,26 +2,30 @@ import React from 'react';
 import UserMinified from '../UserMinified/UserMinified';
 import classes from './LiftStatus.module.scss';
 
-const { liftStatusContainer, statusContent, statusActions } = classes;
+const { liftStatusContainer, statusContent, statusActions, statusFlex } = classes;
 
 // This is going to be iterable. These are the style tweet status updates
 const LiftStatus = (props) => {
     return (
         <div className={liftStatusContainer}>
-            <UserMinified
-                feed
-                userName={'LilBuffStuff93'}
-                gym={'Xperience'}
-            />
-            <div>
-                <div className={statusContent}>
-                    Making them gains! Whole squad coming up this Saturday for a 💦✅ Making them gains! Whole squad coming up this Saturday for a 
-                    Making them gains! Whole squad coming up this Saturday for a  Making them gains! Whole squad coming up this Saturday for a 
-                    Making them gains! Whole squad coming up this Saturday for a  Making them gains! Whole squad coming up this Saturday for a  
-                    Making them gains! Whole squad coming up this Saturday for a  Making them gains! Whole squad coming up this Saturday for a 
-                    Making them gains! Whole squad coming up this Saturday for a  Making them gains! Whole squad coming up this Saturday for a 
+            <section className={statusFlex}>
+                <UserMinified
+                    feed
+                    userName={'LilBuffStuff93'}
+                    gym={'Xperience'}
+                />
+                <div>
+                    <div className={statusContent}>
+                        Making them gains! Whole squad coming up this Saturday for a 💦✅<br />
+                        'Cause I'm sinking into cold, cold water
+                        And I wanna be closer to you
+                        Like a Chainsmoker in Boulder
+                        We're never getting older
+                        'Cause on the other side of the screen
+                        I wish it was summer of '16
+                    </div>
                 </div>
-            </div>
+            </section>
             <div className={statusActions}>
                 <button>
                     <svg
